@@ -1,3 +1,7 @@
+# FP Tegraf Kelompok 14
+- Kagendra Amadeo Reynara Pratista (5053241015)
+- Danendra Nayottama Hadi (5053241032)
+
 ## Alur Penggunaan Program Knight's Tour 
 
 ## Alur Penggunaan Program Largest Monotonically Increasing Subsequence
