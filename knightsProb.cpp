@@ -2,31 +2,31 @@
 #include <vector>
 using namespace std;
 
-// 8 directions of knight moves
+// seluruh kemungkinan gerakan kuda
 int dx[8] = {2, 1, -1, -2, -2, -1, 1, 2};
 int dy[8] = {1, 2, 2, 1, -1, -2, -2, -1};
 
-// Utility function to check if the 
-// move is valid
+// fungsi untuk memeriksa apakah posisi (x, y) aman untuk kuda (belum dikunjungi)
 bool isSafe(int x, int y, int n, vector<vector<int>> &board) {
     return (x >= 0 && y >= 0 && x < n &&
             y < n && board[x][y] == -1);
 }
 
-// Recursive function to solve Knight's Tour
+// fungsi rekursif untuk menyelesaikan masalah Knight's Tour
 bool knightTourUtil(int x, int y, int step, int n, vector<vector<int>> &board) {
 
-    // If all squares are visited
+    // jika step == n * n --> semua kotak telah dikunjungi
     if (step == n * n) {
         return true;
     }
 
-    // Try all 8 possible knight moves
+    // coba semua kemungkinan gerakan kuda
     for (int i = 0; i < 8; i++) {
         int nx = x + dx[i];
         int ny = y + dy[i];
 
         if (isSafe(nx, ny, n, board)) {
+            // tandai kotak sebagai dikunjungi
             board[nx][ny] = step;
 
             if (knightTourUtil(nx, ny, step + 1, n, board)) {
@@ -41,11 +41,10 @@ bool knightTourUtil(int x, int y, int step, int n, vector<vector<int>> &board) {
     return false;
 }
 
-// Function to start Knight's Tour
 vector<vector<int>> knightTour(int n) {
     vector<vector<int>> board(n, vector<int>(n, -1));
 
-    // Start from top-left corner
+    // mulai dari paling kiri atas dari papan catur
     board[0][0] = 0;
 
     if (knightTourUtil(0, 0, 1, n, board)) {
@@ -56,7 +55,8 @@ vector<vector<int>> knightTour(int n) {
 }
 
 int main() {
-    int n = 5;
+    int n;
+    cin >> n;
 
     vector<vector<int>> res = knightTour(n);
 
