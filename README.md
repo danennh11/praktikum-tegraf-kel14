@@ -1,4 +1,4 @@
-# Praktikuim Tegraf Kelompok 14
+# Praktikum Tegraf Kelompok 14
 - Kagendra Amadeo Reynara Pratista (5053241015)
 - Danendra Nayottama Hadi (5053241032)
 
@@ -45,4 +45,5 @@ python main.py
 4 1 13 7 0 2 8 11 3
 ```
 4. Output akan menghasilkan sebuah gambar dari sebuah graph tree yang berisi subsequence terpanjang serta panjangnya. Graph dengan garis warna merah menandakan graph terpanjang.
+
 ![TreeImg](LIS/lis_tree_final_labeled.png)
