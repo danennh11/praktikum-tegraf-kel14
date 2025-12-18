@@ -29,5 +29,4 @@ if __name__ == "__main__":
     
     hasil = print_lis(arr)
     print(hasil)
-    print(f"Panjangnya longest subsequence: {len(hasil)}")
-    # print(f"Subsequence-nya: {hasil}")
+    print(f"panjang longest subsequence: {len(hasil)}")

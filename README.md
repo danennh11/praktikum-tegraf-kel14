@@ -11,7 +11,8 @@ python3 subseq-prob.py
 ```
 4 1 13 7 0 2 8 11 3
 ```
-4. Output akan mengeluarkan panjang dari subsequence terpanjang
+4. Output akan mengeluarkan subsequence terpanjang serta panjangnya
 ```
-4
+[4, 7, 8, 11]
+panjang longest subsequence: 4
 ```
